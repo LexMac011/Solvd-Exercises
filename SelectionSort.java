@@ -13,7 +13,7 @@ class SelectionSort {
 
     public static int[] selectionSort(int[] array) {
   
-        for (int i = 0; i < array.length; i++) {
+        for (int i = 0; i < array.length - 1; i++) {
            int min = i;
            // looking for the minumum value in the array
             for (int j = i + 1; j < array.length; j++) {
@@ -22,11 +22,11 @@ class SelectionSort {
                 }
             }
             // swapping the elements only when the first is smaller
-            if (i != min) {
-                int aux = array[min];
-                array[min] = array[i];
-                array[i] = aux;   
-            }  
+            
+            int aux = array[min];
+            array[min] = array[i];
+            array[i] = aux;   
+            
         }
         return array;
     }  
